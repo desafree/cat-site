@@ -1,5 +1,15 @@
+import Header from './components/Header'
+import BreedPreview from './components/BreedPreview'
+import Info from './components/Info'
+
 const Homepage = () => {
-  return <div>Homepage</div>
+  return (
+    <>
+      <Header></Header>
+      <BreedPreview></BreedPreview>
+      <Info></Info>
+    </>
+  )
 }
 
 export default Homepage

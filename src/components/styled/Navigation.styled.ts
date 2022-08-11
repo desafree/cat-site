@@ -1,0 +1,28 @@
+import styled from 'styled-components'
+
+const NavigationStyled = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 273px;
+  right: 273px;
+  a {
+    color: #000;
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+    li {
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+`
+
+export default NavigationStyled
