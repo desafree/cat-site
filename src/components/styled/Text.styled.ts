@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Text from '../shared/Text'
 
-const TextStyled = styled.div`
+const TextStyled = styled(Text)`
   padding: 120px 0;
   max-width: 450px;
 
@@ -23,16 +24,5 @@ const TextStyled = styled.div`
     margin-bottom: 30px;
   }
 `
-
-// <TextStyled>
-//         <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-//         <p>
-//           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex a velit quis ullam. Et, iste
-//           quia. Id aperiam iure tempore natus dicta aliquid corporis ipsa.
-//         </p>
-//         <Link to='/'>
-//           <LinkStyled>Lorem ipsum</LinkStyled>
-//         </Link>
-//       </TextStyled>
 
 export default TextStyled

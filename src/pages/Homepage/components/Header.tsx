@@ -1,16 +1,22 @@
-import HeaderStyled from '../../../components/styled/Header.styled'
-import SearchInput from './SearchInput'
+import { FC } from 'react'
+import SearchInputStyled from '../../../components/styled/SearchInput.styled'
 
-const Header = () => {
+interface Props {
+  className?: string
+}
+
+const Header: FC<Props> = ({ className }) => {
+  console.log(className)
+
   return (
-    <HeaderStyled>
+    <div className={className}>
       <div className='text'>
         <h1>Lorem, ipsum dolor.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</p>
-        <SearchInput></SearchInput>
+        <SearchInputStyled></SearchInputStyled>
       </div>
       <div className='img-container'></div>
-    </HeaderStyled>
+    </div>
   )
 }
 

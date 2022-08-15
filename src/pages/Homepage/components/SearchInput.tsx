@@ -1,11 +1,15 @@
-import SearchInputStyled from '../../../components/styled/SearchInput'
+import { FC } from 'react'
 
-const SearchInput = () => {
+interface Props {
+  className?: string
+}
+
+const SearchInput: FC<Props> = ({ className }) => {
   return (
-    <SearchInputStyled>
+    <label className={className}>
       <input type='text' placeholder='Enter your breed' />
       <img src='/assets/icons/search.svg' alt='' />
-    </SearchInputStyled>
+    </label>
   )
 }
 

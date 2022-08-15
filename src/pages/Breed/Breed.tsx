@@ -1,5 +1,11 @@
+import CatInfo from './components/CatInfo'
+
 const BreedPage = () => {
-  return <div>Breed Page</div>
+  return (
+    <>
+      <CatInfo></CatInfo>
+    </>
+  )
 }
 
 export default BreedPage

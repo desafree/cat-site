@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import BreedPreview from '../../pages/Homepage/components/BreedPreview'
 
-const BreedPreviewStyled = styled.section`
+const BreedPreviewStyled = styled(BreedPreview)`
   .breeds {
     margin: 80px 0 150px;
     display: flex;

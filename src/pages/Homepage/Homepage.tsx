@@ -1,12 +1,12 @@
-import Header from './components/Header'
-import BreedPreview from './components/BreedPreview'
+import HeaderStyled from '../../components/styled/Header.styled'
+import BreedPreviewStyled from '../../components/styled/BreedPreview.styled'
 import Info from './components/Info'
 
 const Homepage = () => {
   return (
     <>
-      <Header></Header>
-      <BreedPreview></BreedPreview>
+      <HeaderStyled></HeaderStyled>
+      <BreedPreviewStyled></BreedPreviewStyled>
       <Info></Info>
     </>
   )

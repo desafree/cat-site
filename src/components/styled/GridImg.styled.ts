@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import GridImg from '../../pages/Homepage/components/GridImages'
 
-const GridImgStyled = styled.div`
+const GridImgStyled = styled(GridImg)`
   display: grid;
   gap: 200px;
   grid-template-columns: repeat(5, 1fr);

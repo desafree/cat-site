@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import theme from '../../theme'
+import Header from '../../pages/Homepage/components/Header'
 
-const HeaderStyled = styled.header`
+const HeaderStyled = styled(Header)`
   display: flex;
   justify-content: space-between;
   margin: 0 0 80px 0;
@@ -42,14 +42,5 @@ const HeaderStyled = styled.header`
     border-bottom-left-radius: 400px;
   }
 `
-
-// <HeaderStyled>
-//       <div className='text'>
-//         <h1>Lorem, ipsum dolor.</h1>
-//         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</p>
-//         <button>Lorem, ipsum.</button>
-//       </div>
-//       <div className='img-container'></div>
-//     </HeaderStyled>
 
 export default HeaderStyled

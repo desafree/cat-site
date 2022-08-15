@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import SearchInput from '../../pages/Homepage/components/SearchInput'
 
-const SearchInputStyled = styled.label`
+const SearchInputStyled = styled(SearchInput)`
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -25,8 +26,3 @@ const SearchInputStyled = styled.label`
 `
 
 export default SearchInputStyled
-
-// <label htmlFor='breed'>
-// <input type='text' />
-// <img src='/assets/icons/search.svg' alt='' />
-// </label>
