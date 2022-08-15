@@ -23,6 +23,22 @@ const SearchInputStyled = styled(SearchInput)`
     right: 25px;
     width: 20px;
   }
+
+  @media (max-width: 1400px) {
+    input {
+      min-width: 300px;
+    }
+
+    img {
+      top: 18px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    input {
+      min-width: 250px;
+    }
+  }
 `
 
 export default SearchInputStyled

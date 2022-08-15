@@ -1,9 +1,11 @@
-import CatInfo from './components/CatInfo'
+import CatInfoStyled from '../../components/styled/CatInfo.styled'
+import CatGalleryStyled from '../../components/styled/CatGallery.styled'
 
 const BreedPage = () => {
   return (
     <>
-      <CatInfo></CatInfo>
+      <CatInfoStyled></CatInfoStyled>
+      <CatGalleryStyled></CatGalleryStyled>
     </>
   )
 }

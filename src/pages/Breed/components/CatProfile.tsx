@@ -9,13 +9,15 @@ const CatProfile: FC<Props> = ({ className }) => {
     <div className={className}>
       <button>
         {' '}
-        <img src='/assets/icons/search.svg' alt='' />{' '}
+        <img src='/assets/icons/back.svg' alt='' />{' '}
       </button>
       <div className='preview'>
-        <img src='/assets/home/cat-home.jpg' alt='' />
+        <div className='img-container' />
         <div className='text'>
-          <h5>Cat breed</h5>
-          <p>Lorem, ipsum dolor.</p>
+          <p>
+            <strong>Cat Breed</strong>
+            <br /> Lorem, ipsum dolor.
+          </p>
         </div>
       </div>
     </div>

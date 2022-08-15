@@ -23,6 +23,11 @@ const TextStyled = styled(Text)`
     text-align: left;
     margin-bottom: 30px;
   }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-bottom: 80px;
+  }
 `
 
 export default TextStyled

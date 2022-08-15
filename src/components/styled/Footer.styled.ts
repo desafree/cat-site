@@ -19,6 +19,14 @@ const FooterStyled = styled.footer`
     text-decoration: none;
     color: #fff;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
 `
 
 export default FooterStyled

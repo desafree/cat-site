@@ -43,6 +43,64 @@ const BreedPreviewStyled = styled(BreedPreview)`
       }
     }
   }
+
+  @media (max-width: 1400px) {
+    .breeds {
+      a {
+        width: 200px;
+        height: 200px;
+
+        span {
+          position: absolute;
+          bottom: 10px;
+          right: -20px;
+          padding: 10px 25px;
+          background-color: white;
+          border-radius: 29px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 30px;
+          letter-spacing: 0px;
+          text-align: left;
+          color: ${({ theme }) => theme.colors.secondary};
+          border: 2px solid ${({ theme }) => theme.colors.secondary};
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        &:nth-child(2) {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .breeds {
+      a {
+        display: none;
+
+        &:nth-child(2) {
+          display: initial;
+          width: 400px;
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .breeds {
+      margin: 80px 0;
+      a {
+        &:nth-child(2) {
+          display: initial;
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
 `
 
 // <BreedPreviewStyled>

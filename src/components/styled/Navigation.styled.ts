@@ -23,6 +23,10 @@ const NavigationStyled = styled.nav`
       }
     }
   }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `
 
 export default NavigationStyled

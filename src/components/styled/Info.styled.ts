@@ -6,6 +6,11 @@ const InfoStyled = styled.section`
   justify-content: center;
   align-items: center;
   margin: 150px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `
 
 export default InfoStyled

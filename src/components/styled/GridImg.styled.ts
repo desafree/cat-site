@@ -27,6 +27,10 @@ const GridImgStyled = styled(GridImg)`
   .div3 {
     grid-area: 1 / 4 / 6 / 6;
   }
+
+  @media (max-width: 768px) {
+    grid-template-rows: repeat(7, 80px);
+  }
 `
 
 export default GridImgStyled
