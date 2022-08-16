@@ -14,8 +14,12 @@ const CharacteristicsStyled = styled(Characteristics)`
       letter-spacing: 0em;
       text-align: left;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 20px;
       align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      padding: 5px 0;
 
       .value {
         display: flex;
@@ -28,8 +32,60 @@ const CharacteristicsStyled = styled(Characteristics)`
           background-color: white;
           border: 1px solid ${({ theme }) => theme.colors.primary};
 
-          &.active {
-            background-color: ${({ theme }) => theme.colors.primary};
+          &.active1 {
+            &:nth-child(1) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+          }
+          &.active2 {
+            &:nth-child(1) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(2) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+          }
+          &.active3 {
+            &:nth-child(1) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(2) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(3) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+          }
+          &.active4 {
+            &:nth-child(1) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(2) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(3) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(4) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+          }
+          &.active5 {
+            &:nth-child(1) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(2) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(3) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(4) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
+            &:nth-child(5) {
+              background-color: ${({ theme }) => theme.colors.primary};
+            }
           }
         }
       }

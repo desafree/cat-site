@@ -9,19 +9,60 @@ const SearchInputStyled = styled(SearchInput)`
   text-align: left;
   position: relative;
 
+  .results {
+    position: absolute;
+    top: 50px;
+
+    background: #ffffff;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border: 1px solid #bdbdbd;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    div {
+      padding: 20px 48px 20px 28px;
+      border-bottom: 1px solid #bdbdbd;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      &:hover {
+        background: rgba(151, 151, 151, 0.1);
+      }
+    }
+  }
+
   input {
     min-width: 400px;
     padding: 20px 48px 20px 28px;
     background: #ffffff;
     border-radius: 59px;
     border: 1px solid #7a746e;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 
-  img {
+  .go {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: content-box;
+    border: 1px solid white;
+    color: white;
     position: absolute;
-    top: 4px;
+    font-weight: 700;
+    background-color: ${({ theme }) => theme.colors.primary};
+    top: -7px;
+    border-radius: 50%;
     right: 25px;
     width: 20px;
+    cursor: pointer;
   }
 
   @media (max-width: 1400px) {

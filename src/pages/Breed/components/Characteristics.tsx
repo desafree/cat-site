@@ -1,10 +1,12 @@
 import { FC } from 'react'
+import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 
 interface Props {
   className?: string
+  breed: ApiBreedResponseType
 }
 
-const Characteristics: FC<Props> = ({ className }) => {
+const Characteristics: FC<Props> = ({ className, breed }) => {
   return (
     <div className={className}>
       <div className='item'>
@@ -12,71 +14,102 @@ const Characteristics: FC<Props> = ({ className }) => {
           Adaptability:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.adaptability}`}></span>
+            <span className={`active${breed.adaptability}`}></span>
+            <span className={`active${breed.adaptability}`}></span>
+            <span className={`active${breed.adaptability}`}></span>
+            <span className={`active${breed.adaptability}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Affection level:{' '}
           <div className='value'>
             {' '}
-            <span className='active'></span> <span className='active'></span>{' '}
-            <span className='active'></span> <span className='active'></span> <span></span>
+            <span className={`active${breed.affection_level}`}></span>
+            <span className={`active${breed.affection_level}`}></span>
+            <span className={`active${breed.affection_level}`}></span>
+            <span className={`active${breed.affection_level}`}></span>
+            <span className={`active${breed.affection_level}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Child Friendly:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.child_friendly}`}></span>
+            <span className={`active${breed.child_friendly}`}></span>
+            <span className={`active${breed.child_friendly}`}></span>
+            <span className={`active${breed.child_friendly}`}></span>
+            <span className={`active${breed.child_friendly}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Grooming:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.grooming}`}></span>
+            <span className={`active${breed.grooming}`}></span>
+            <span className={`active${breed.grooming}`}></span>
+            <span className={`active${breed.grooming}`}></span>
+            <span className={`active${breed.grooming}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Intelligence:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.intelligence}`}></span>
+            <span className={`active${breed.intelligence}`}></span>
+            <span className={`active${breed.intelligence}`}></span>
+            <span className={`active${breed.intelligence}`}></span>
+            <span className={`active${breed.intelligence}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Health issues:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.health_issues}`}></span>
+            <span className={`active${breed.health_issues}`}></span>
+            <span className={`active${breed.health_issues}`}></span>
+            <span className={`active${breed.health_issues}`}></span>
+            <span className={`active${breed.health_issues}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Social needs:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.social_needs}`}></span>
+            <span className={`active${breed.social_needs}`}></span>
+            <span className={`active${breed.social_needs}`}></span>
+            <span className={`active${breed.social_needs}`}></span>
+            <span className={`active${breed.social_needs}`}></span>
           </div>
         </h4>
       </div>
       <div className='item'>
         <h4>
-          Adaptability:{' '}
+          Stranger friendly:{' '}
           <div className='value'>
             {' '}
-            <span></span> <span></span> <span></span> <span></span> <span></span>
+            <span className={`active${breed.stranger_friendly}`}></span>
+            <span className={`active${breed.stranger_friendly}`}></span>
+            <span className={`active${breed.stranger_friendly}`}></span>
+            <span className={`active${breed.stranger_friendly}`}></span>
+            <span className={`active${breed.stranger_friendly}`}></span>
           </div>
         </h4>
       </div>

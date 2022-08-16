@@ -1,17 +1,23 @@
 import { FC } from 'react'
+import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 
 interface Props {
   className?: string
+  breed: ApiBreedResponseType
 }
 
-const CatCategory: FC<Props> = ({ className }) => {
+const CatCategory: FC<Props> = ({ className, breed }) => {
+  const characteristics = breed.temperament.split(',')
+
   return (
     <div className={className}>
-      <div className='category'>Alert</div>
-      <div className='category'>Alert</div>
-      <div className='category'>Alert</div>
-      <div className='category'>Alert</div>
-      <div className='category'>Alert</div>
+      {characteristics.map((value) => {
+        return (
+          <div className='category' key={value}>
+            {value}
+          </div>
+        )
+      })}
     </div>
   )
 }
