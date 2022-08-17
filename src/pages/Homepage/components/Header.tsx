@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import SearchInputStyled from '../../../components/styled/SearchInput.styled'
-import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 
 interface Props {
   className?: string

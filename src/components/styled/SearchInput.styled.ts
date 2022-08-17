@@ -73,6 +73,10 @@ const SearchInputStyled = styled(SearchInput)`
     img {
       top: 18px;
     }
+
+    .go {
+      top: 12px;
+    }
   }
 
   @media (max-width: 700px) {

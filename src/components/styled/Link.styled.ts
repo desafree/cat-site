@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LinkText from '../shared/Link'
+import LinkText from '../ui/Link'
 
 const LinkStyled = styled(LinkText)`
   font-size: 18px;

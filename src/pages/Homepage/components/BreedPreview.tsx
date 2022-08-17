@@ -1,6 +1,5 @@
 import { FC, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 import BreedContext from '../../../context/BreedContext'
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 
 const BreedPreview: FC<Props> = ({ className }) => {
   const [index, setIndex] = useState([0, 1, 2])
-  const { breeds, stateFetch } = useContext(BreedContext)
+  const { breeds } = useContext(BreedContext)
 
   const displayedBreeds =
     breeds.length > 0 ? [breeds[index[0]], breeds[index[1]], breeds[index[2]]] : []
@@ -19,7 +18,6 @@ const BreedPreview: FC<Props> = ({ className }) => {
       if (index + 1 === breeds.length) return 0
       return index + 1
     })
-
     setIndex(newIndex)
   }
 
@@ -28,7 +26,6 @@ const BreedPreview: FC<Props> = ({ className }) => {
       if (index - 1 < 0) return breeds.length - 1
       return index - 1
     })
-
     setIndex(newIndex)
   }
 

@@ -5,6 +5,4 @@ export interface ApiImageResponse {
   url: string
 }
 
-type ApiGalleryResponse = ApiImageResponse[]
-
-export default ApiGalleryResponse
+export default ApiImageResponse

@@ -1,6 +1,5 @@
-import { FC, LegacyRef, MutableRefObject, useRef, useState, useContext } from 'react'
+import { FC, useRef, useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 import BreedContext from '../../../context/BreedContext'
 
 interface Props {
@@ -11,14 +10,12 @@ const SearchInput: FC<Props> = ({ className }) => {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const [focus, setFocus] = useState(false)
-
-  const { breeds, stateFetch } = useContext(BreedContext)
+  const { breeds } = useContext(BreedContext)
+  const input = useRef<null | HTMLInputElement>(null)
 
   const validBreed = breeds.filter((breed) => {
     if (breed.name.toLowerCase().includes(value.toLowerCase())) return true
   })
-
-  const input = useRef<null | HTMLInputElement>(null)
 
   const onChangeHandler = () => {
     if (input.current) {

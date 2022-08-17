@@ -12,6 +12,7 @@ const BreedPreviewStyled = styled(BreedPreview)`
     border: none;
     cursor: pointer;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 20;
 
     &.left {
       position: absolute;
@@ -32,6 +33,7 @@ const BreedPreviewStyled = styled(BreedPreview)`
     justify-content: center;
     align-items: center;
     gap: 50px;
+    overflow: hidden;
 
     a {
       div {
@@ -73,8 +75,10 @@ const BreedPreviewStyled = styled(BreedPreview)`
   @media (max-width: 1400px) {
     .breeds {
       a {
-        width: 200px;
-        height: 200px;
+        div {
+          width: 200px;
+          height: 200px;
+        }
 
         span {
           position: absolute;
@@ -93,10 +97,20 @@ const BreedPreviewStyled = styled(BreedPreview)`
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
 
-        &:nth-child(2) {
+        &:nth-child(2) div {
           width: 300px;
           height: 300px;
         }
+      }
+    }
+
+    button {
+      &.left {
+        left: -5%;
+      }
+
+      &.right {
+        right: -5%;
       }
     }
   }
@@ -104,13 +118,25 @@ const BreedPreviewStyled = styled(BreedPreview)`
   @media (max-width: 1000px) {
     .breeds {
       a {
-        display: none;
+        div {
+          visibility: hidden;
+        }
 
-        &:nth-child(2) {
-          display: initial;
+        &:nth-child(2) div {
+          visibility: visible;
           width: 400px;
           height: 400px;
         }
+      }
+    }
+
+    button {
+      &.left {
+        left: 10%;
+      }
+
+      &.right {
+        right: 10%;
       }
     }
   }
@@ -119,24 +145,27 @@ const BreedPreviewStyled = styled(BreedPreview)`
     .breeds {
       margin: 80px 0;
       a {
-        &:nth-child(2) {
-          display: initial;
-          width: 300px;
-          height: 300px;
+        div {
+          visibility: hidden;
         }
+        &:nth-child(2) div {
+          visibility: visible;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+
+    button {
+      &.left {
+        left: 5%;
+      }
+
+      &.right {
+        right: 5%;
       }
     }
   }
 `
-// <section className={className}>
-//       <button className='left'>
-//         <img src='/assets/icons/arrow-back.svg' alt='' />
-//       </button>
-//       <button className='right'>
-//         <img src='/assets/icons/arrow-forward.svg' alt='' />
-//       </button>
-//       <div className='breeds'>
-//         <Link to='/'>
-//           <span>breedName</span>
-//         </Link>
+
 export default BreedPreviewStyled

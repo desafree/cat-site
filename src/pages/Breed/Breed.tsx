@@ -4,8 +4,10 @@ import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import LoadingStyled from '../../components/styled/Loading.styled'
 import BreedContext from '../../context/BreedContext'
+import useScrollToTop from '../../hooks/scrollToTop'
 
 const BreedPage = () => {
+  useScrollToTop()
   const params = useParams()
   const { breeds, stateFetch } = useContext(BreedContext)
 

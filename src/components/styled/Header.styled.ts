@@ -122,40 +122,21 @@ const HeaderStyled = styled(Header)`
         text-align: left;
         max-width: 450px;
         margin-bottom: 50px;
+        color: white;
       }
-    }
-
-    .img-container {
-      flex: 1;
-      background-image: url('/assets/home/cat-home.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 400px;
     }
   }
 
   @media (max-width: 700px) {
     display: block;
-
+    background-image: url(/assets/home/cat-home-smart.jpg);
     .text {
       margin: 0 30px;
       padding: 150px 0;
-    }
 
-    .img-container {
-      flex: 1;
-      background-image: url('/assets/home/cat-home.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 400px;
+      p {
+        color: white;
+      }
     }
   }
 `

@@ -4,9 +4,11 @@ import Info from './components/Info'
 import LoadingStyled from '../../components/styled/Loading.styled'
 import BreedContext from '../../context/BreedContext'
 import { useContext } from 'react'
+import useScrollToTop from '../../hooks/scrollToTop'
 
 const Homepage = () => {
-  const { breeds, stateFetch } = useContext(BreedContext)
+  useScrollToTop()
+  const { stateFetch } = useContext(BreedContext)
 
   return (
     <>

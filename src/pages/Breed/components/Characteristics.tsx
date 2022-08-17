@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
+import CharacteristicItem from './CharacteristicItem'
 
 interface Props {
   className?: string
@@ -9,110 +10,26 @@ interface Props {
 const Characteristics: FC<Props> = ({ className, breed }) => {
   return (
     <div className={className}>
-      <div className='item'>
-        <h4>
-          Adaptability:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.adaptability}`}></span>
-            <span className={`active${breed.adaptability}`}></span>
-            <span className={`active${breed.adaptability}`}></span>
-            <span className={`active${breed.adaptability}`}></span>
-            <span className={`active${breed.adaptability}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Affection level:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.affection_level}`}></span>
-            <span className={`active${breed.affection_level}`}></span>
-            <span className={`active${breed.affection_level}`}></span>
-            <span className={`active${breed.affection_level}`}></span>
-            <span className={`active${breed.affection_level}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Child Friendly:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.child_friendly}`}></span>
-            <span className={`active${breed.child_friendly}`}></span>
-            <span className={`active${breed.child_friendly}`}></span>
-            <span className={`active${breed.child_friendly}`}></span>
-            <span className={`active${breed.child_friendly}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Grooming:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.grooming}`}></span>
-            <span className={`active${breed.grooming}`}></span>
-            <span className={`active${breed.grooming}`}></span>
-            <span className={`active${breed.grooming}`}></span>
-            <span className={`active${breed.grooming}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Intelligence:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.intelligence}`}></span>
-            <span className={`active${breed.intelligence}`}></span>
-            <span className={`active${breed.intelligence}`}></span>
-            <span className={`active${breed.intelligence}`}></span>
-            <span className={`active${breed.intelligence}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Health issues:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.health_issues}`}></span>
-            <span className={`active${breed.health_issues}`}></span>
-            <span className={`active${breed.health_issues}`}></span>
-            <span className={`active${breed.health_issues}`}></span>
-            <span className={`active${breed.health_issues}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Social needs:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.social_needs}`}></span>
-            <span className={`active${breed.social_needs}`}></span>
-            <span className={`active${breed.social_needs}`}></span>
-            <span className={`active${breed.social_needs}`}></span>
-            <span className={`active${breed.social_needs}`}></span>
-          </div>
-        </h4>
-      </div>
-      <div className='item'>
-        <h4>
-          Stranger friendly:{' '}
-          <div className='value'>
-            {' '}
-            <span className={`active${breed.stranger_friendly}`}></span>
-            <span className={`active${breed.stranger_friendly}`}></span>
-            <span className={`active${breed.stranger_friendly}`}></span>
-            <span className={`active${breed.stranger_friendly}`}></span>
-            <span className={`active${breed.stranger_friendly}`}></span>
-          </div>
-        </h4>
-      </div>
+      <CharacteristicItem title='Adaptability' intensity={breed.adaptability}></CharacteristicItem>
+      <CharacteristicItem
+        title='Affection level'
+        intensity={breed.affection_level}
+      ></CharacteristicItem>
+      <CharacteristicItem
+        title='Child Friendly'
+        intensity={breed.child_friendly}
+      ></CharacteristicItem>
+      <CharacteristicItem title='Grooming' intensity={breed.grooming}></CharacteristicItem>
+      <CharacteristicItem title='Intelligence' intensity={breed.intelligence}></CharacteristicItem>
+      <CharacteristicItem
+        title='Health issues'
+        intensity={breed.health_issues}
+      ></CharacteristicItem>
+      <CharacteristicItem title='Social needs' intensity={breed.social_needs}></CharacteristicItem>
+      <CharacteristicItem
+        title='Stranger friendly'
+        intensity={breed.adaptability}
+      ></CharacteristicItem>
     </div>
   )
 }

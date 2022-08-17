@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
 
 interface Props {
@@ -7,6 +8,12 @@ interface Props {
 }
 
 const CatProfile: FC<Props> = ({ className, breed }) => {
+  const navigation = useNavigate()
+
+  const handleClickBack = () => {
+    navigation(-1)
+  }
+
   return (
     <div
       className={className}
@@ -14,7 +21,7 @@ const CatProfile: FC<Props> = ({ className, breed }) => {
         backgroundImage: `url(${breed.image.url})`,
       }}
     >
-      <button>
+      <button onClick={handleClickBack}>
         {' '}
         <img src='/assets/icons/back.svg' alt='' />{' '}
       </button>

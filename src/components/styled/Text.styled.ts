@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Text from '../shared/Text'
+import Text from '../ui/Text'
 
 const TextStyled = styled(Text)`
   padding: 120px 0;

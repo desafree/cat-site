@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../../../hooks/fetch'
 import { ApiImageResponse } from '../../../typescript/interfaces/ApiImagesResponse'

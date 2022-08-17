@@ -23,6 +23,7 @@ const CatProfileStyled = styled(CatProfile)`
     position: absolute;
     top: 20px;
     left: 20px;
+    cursor: pointer;
 
     img {
       width: 25px;

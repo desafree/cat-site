@@ -30,61 +30,61 @@ const CharacteristicsStyled = styled(Characteristics)`
           height: 15px;
           border-radius: 5px;
           background-color: white;
-          border: 1px solid ${({ theme }) => theme.colors.primary};
+          border: 1px solid rgba(0, 0, 0, 0.2);
 
           &.active1 {
             &:nth-child(1) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f5f0bb;
             }
           }
           &.active2 {
             &:nth-child(1) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f5f0bb;
             }
             &:nth-child(2) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f6e3c5;
             }
           }
           &.active3 {
             &:nth-child(1) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f5f0bb;
             }
             &:nth-child(2) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f6e3c5;
             }
             &:nth-child(3) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #a0d995;
             }
           }
           &.active4 {
             &:nth-child(1) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f5f0bb;
             }
             &:nth-child(2) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f6e3c5;
             }
             &:nth-child(3) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #a0d995;
             }
             &:nth-child(4) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #6cc4a1;
             }
           }
           &.active5 {
             &:nth-child(1) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f5f0bb;
             }
             &:nth-child(2) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #f6e3c5;
             }
             &:nth-child(3) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #a0d995;
             }
             &:nth-child(4) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #6cc4a1;
             }
             &:nth-child(5) {
-              background-color: ${({ theme }) => theme.colors.primary};
+              background-color: #4cacbc;
             }
           }
         }
