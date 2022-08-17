@@ -1,14 +1,15 @@
-import { FC, useState } from 'react'
+import { FC, useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
+import BreedContext from '../../../context/BreedContext'
 
 interface Props {
   className?: string
-  breeds: ApiBreedResponseType[]
 }
 
-const BreedPreview: FC<Props> = ({ className, breeds }) => {
+const BreedPreview: FC<Props> = ({ className }) => {
   const [index, setIndex] = useState([0, 1, 2])
+  const { breeds, stateFetch } = useContext(BreedContext)
 
   const displayedBreeds =
     breeds.length > 0 ? [breeds[index[0]], breeds[index[1]], breeds[index[2]]] : []

@@ -1,4 +1,4 @@
-interface ApiImageResponse {
+export interface ApiImageResponse {
   id: string
   width: number
   height: number

@@ -1,42 +1,22 @@
 import CatInfoStyled from '../../components/styled/CatInfo.styled'
 import CatGalleryStyled from '../../components/styled/CatGallery.styled'
-import { useState, useEffect } from 'react'
-import ApiBreedResponseType from '../../typescript/interfaces/ApiBreedResponse'
+import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import LoadingStyled from '../../components/styled/Loading.styled'
+import BreedContext from '../../context/BreedContext'
 
 const BreedPage = () => {
-  const [breed, setBreed] = useState<ApiBreedResponseType>()
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
   const params = useParams()
+  const { breeds, stateFetch } = useContext(BreedContext)
 
-  useEffect(() => {
-    setLoading(true)
-    fetch('https://api.thecatapi.com/v1/breeds', {
-      headers: {
-        'x-api-key': process.env.REACT_APP_API_KEY as string,
-      },
-    })
-      .then((res) => res.json())
-      .then((data: ApiBreedResponseType[]) => {
-        const activeBreed = data.find((breed) => {
-          if (breed.id === params.breed) return true
-        })
-        if (activeBreed) {
-          setBreed(activeBreed)
-        }
-      })
-      .catch((err) => {
-        setError(true)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [])
+  const breed = breeds.find((breed) => {
+    if (breed.id === params.breed) return true
+  })
 
   return (
     <>
-      {breed && (
+      {stateFetch === 'loading' && <LoadingStyled />}
+      {stateFetch === 'success' && breed && (
         <>
           <CatInfoStyled breed={breed}></CatInfoStyled>
           <CatGalleryStyled></CatGalleryStyled>

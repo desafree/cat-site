@@ -8,21 +8,24 @@ import theme from './theme'
 import Navigation from './components/shared/Navigation'
 import Layout from './components/styled/Layout.styled'
 import Footer from './components/shared/Footer'
+import { BreedContextProvider } from './context/BreedContext'
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle></GlobalStyle>
-        <Layout>
-          <Navigation></Navigation>
-          <Routes>
-            <Route path='/' element={<Homepage />}></Route>
-            <Route path='/:breed' element={<BreedPage />}></Route>
-          </Routes>
-          <Footer></Footer>
-        </Layout>
-      </ThemeProvider>
+      <BreedContextProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle></GlobalStyle>
+          <Layout>
+            <Navigation></Navigation>
+            <Routes>
+              <Route path='/' element={<Homepage />}></Route>
+              <Route path='/:breed' element={<BreedPage />}></Route>
+            </Routes>
+            <Footer></Footer>
+          </Layout>
+        </ThemeProvider>
+      </BreedContextProvider>
     </>
   )
 }

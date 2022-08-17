@@ -4,10 +4,9 @@ import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedRespons
 
 interface Props {
   className?: string
-  breeds: ApiBreedResponseType[]
 }
 
-const Header: FC<Props> = ({ className, breeds }) => {
+const Header: FC<Props> = ({ className }) => {
   console.log(className)
 
   return (
@@ -15,7 +14,7 @@ const Header: FC<Props> = ({ className, breeds }) => {
       <div className='text'>
         <h1>Lorem, ipsum dolor.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</p>
-        <SearchInputStyled breeds={breeds}></SearchInputStyled>
+        <SearchInputStyled></SearchInputStyled>
       </div>
       <div className='img-container'></div>
     </div>

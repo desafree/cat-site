@@ -1,16 +1,18 @@
-import { FC, LegacyRef, MutableRefObject, useRef, useState } from 'react'
+import { FC, LegacyRef, MutableRefObject, useRef, useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
+import BreedContext from '../../../context/BreedContext'
 
 interface Props {
   className?: string
-  breeds: ApiBreedResponseType[]
 }
 
-const SearchInput: FC<Props> = ({ className, breeds }) => {
+const SearchInput: FC<Props> = ({ className }) => {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const [focus, setFocus] = useState(false)
+
+  const { breeds, stateFetch } = useContext(BreedContext)
 
   const validBreed = breeds.filter((breed) => {
     if (breed.name.toLowerCase().includes(value.toLowerCase())) return true
