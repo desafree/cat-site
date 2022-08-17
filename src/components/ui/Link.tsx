@@ -5,13 +5,22 @@ interface Props {
   url: string
   className?: string
   children: React.ReactNode
+  type?: string
 }
 
-const LinkText: FC<Props> = ({ url, className, children }) => {
+const LinkText: FC<Props> = ({ url, className, children, type }) => {
+  if (type === 'internal') {
+    return (
+      <Link to={url} className={className}>
+        {children}
+      </Link>
+    )
+  }
+
   return (
-    <Link to={url} className={className}>
+    <a href={url} className={className} target='_blank' rel='noreferrer'>
       {children}
-    </Link>
+    </a>
   )
 }
 

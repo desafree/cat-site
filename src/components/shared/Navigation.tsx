@@ -8,13 +8,21 @@ const Navigation = () => {
 
       <ul>
         <li>
-          <Link to='/'>link1</Link>
+          <a href='https://github.com/desafree' target='_blank' rel='noreferrer'>
+            github
+          </a>
         </li>
         <li>
-          <Link to='/'>link2</Link>
+          <a
+            href='https://www.linkedin.com/in/nicola-de-sanctis-8b094a1b3/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            linkedin
+          </a>
         </li>
         <li>
-          <Link to='/'>link3</Link>
+          <a href='mailto:nicoladesanctis99@gmail.com'>mail</a>
         </li>
       </ul>
     </NavigationStyled>

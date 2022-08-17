@@ -6,11 +6,10 @@ const Info = () => {
   return (
     <InfoStyled>
       <TextStyled
-        title='Lorem ipsum dolor sit amet consectetur'
-        description='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex a velit quis ullam. Et, iste
-          quia. Id aperiam iure tempore natus dicta aliquid corporis ipsa.'
-        linkTitle='Lorem ipsum'
-        linkPath='/'
+        title='Why should you have a cat?'
+        description='Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves'
+        linkTitle='Discover cats breeds'
+        linkPath='https://www.petfinder.com/pet-adoption/cat-adoption/'
       ></TextStyled>
       <GridImgStyled></GridImgStyled>
     </InfoStyled>

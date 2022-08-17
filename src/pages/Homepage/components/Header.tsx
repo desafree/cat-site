@@ -6,13 +6,11 @@ interface Props {
 }
 
 const Header: FC<Props> = ({ className }) => {
-  console.log(className)
-
   return (
     <div className={className}>
       <div className='text'>
-        <h1>Lorem, ipsum dolor.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</p>
+        <h1>Cat Wikipedia</h1>
+        <p>Get to know more about your cat breed! 66+ Breeds For you to discover</p>
         <SearchInputStyled></SearchInputStyled>
       </div>
       <div className='img-container'></div>

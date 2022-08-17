@@ -40,7 +40,6 @@ const BreedPreview: FC<Props> = ({ className }) => {
       <div className='breeds'>
         {displayedBreeds.length > 0 &&
           displayedBreeds.map((breed) => {
-            console.log(breed.image)
             return (
               <Link to={`/${breed.id}`} key={breed.id}>
                 <div
