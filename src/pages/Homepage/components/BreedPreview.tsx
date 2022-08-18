@@ -1,14 +1,23 @@
-import { FC, useState, useContext } from 'react'
+import { FC, useState, useContext, useRef, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import BreedContext from '../../../context/BreedContext'
+import fadeIn from '../../../utils/animation/fadeIn'
 
 interface Props {
   className?: string
 }
 
 const BreedPreview: FC<Props> = ({ className }) => {
+  const container = useRef<HTMLElement | null>(null)
   const [index, setIndex] = useState([0, 1, 2])
   const { breeds } = useContext(BreedContext)
+
+  useLayoutEffect(() => {
+    const animation = fadeIn(container.current)
+    return () => {
+      animation.kill()
+    }
+  }, [index])
 
   const displayedBreeds =
     breeds.length > 0 ? [breeds[index[0]], breeds[index[1]], breeds[index[2]]] : []
@@ -30,7 +39,7 @@ const BreedPreview: FC<Props> = ({ className }) => {
   }
 
   return (
-    <section className={className}>
+    <section className={className} ref={container}>
       <button className='left' onClick={prevHandleClick}>
         <img src='/assets/icons/arrow-back.svg' alt='' />
       </button>

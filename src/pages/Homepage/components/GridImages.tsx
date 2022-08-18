@@ -17,6 +17,10 @@ const GridImg: FC<Props> = ({ className }) => {
       .timeline({ scrollTrigger: { trigger: container.current, start: 'top 70%' } })
       .to(el('.hide'), { width: '0%' })
       .from(el('div div'), { scale: 1.3 }, '<')
+
+    return () => {
+      tl.kill()
+    }
   }, [])
 
   return (

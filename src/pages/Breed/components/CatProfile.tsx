@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import { FC, useLayoutEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ApiBreedResponseType from '../../../typescript/interfaces/ApiBreedResponse'
+import gsap from 'gsap'
 
 interface Props {
   className?: string
@@ -8,7 +9,21 @@ interface Props {
 }
 
 const CatProfile: FC<Props> = ({ className, breed }) => {
+  const container = useRef<HTMLDivElement | null>(null)
+  const img = useRef<HTMLImageElement | null>(null)
   const navigation = useNavigate()
+
+  useLayoutEffect(() => {
+    const tl = gsap
+      .timeline()
+      .from(img.current, { scale: 2 })
+      .to(container.current, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' }, 0)
+      .to(img.current, { scale: 1, duration: 0.5 })
+
+    return () => {
+      tl.kill()
+    }
+  }, [])
 
   const handleClickBack = () => {
     navigation('/')
@@ -20,7 +35,9 @@ const CatProfile: FC<Props> = ({ className, breed }) => {
       style={{
         backgroundImage: `url(${breed.image.url})`,
       }}
+      ref={container}
     >
+      <img src={breed.image.url} alt='' className='imgCat' ref={img} />
       <button onClick={handleClickBack}>
         {' '}
         <img src='/assets/icons/back.svg' alt='' />{' '}

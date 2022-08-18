@@ -4,12 +4,17 @@ import CatProfile from '../../pages/Breed/components/CatProfile'
 const CatProfileStyled = styled(CatProfile)`
   width: 500px;
   height: 500px;
-  background-image: url(/assets/home/cat-home.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 40px;
   position: relative;
+  background: salmon;
+  overflow: hidden;
+  clip-path: polygon(30% 30%, 70% 30%, 70% 70%, 30% 70%);
+
+  .imgCat {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   button {
     display: flex;
