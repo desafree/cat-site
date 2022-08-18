@@ -6,11 +6,15 @@ const CatInfoStyled = styled(CatInfo)`
   justify-content: center;
   align-items: center;
   gap: 120px;
-  margin: 150px 0;
+  padding: 150px 0;
 
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 60px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 80px 0 150px;
   }
 `
 

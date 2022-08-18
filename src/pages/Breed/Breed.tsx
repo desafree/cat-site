@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import LoadingStyled from '../../components/styled/Loading.styled'
 import BreedContext from '../../context/BreedContext'
 import useScrollToTop from '../../hooks/scrollToTop'
+import Navigation from '../../components/shared/Navigation'
 
 const BreedPage = () => {
   useScrollToTop()
@@ -21,6 +22,7 @@ const BreedPage = () => {
       {stateFetch === 'loading' && <LoadingStyled></LoadingStyled>}
       {stateFetch === 'success' && breed && (
         <>
+          <Navigation></Navigation>
           <CatInfoStyled breed={breed}></CatInfoStyled>
           <CatGalleryStyled></CatGalleryStyled>
         </>
