@@ -1,6 +1,7 @@
-import { FC, useRef, useState, useContext } from 'react'
+import { FC, useRef, useState, useContext, useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BreedContext from '../../../context/BreedContext'
+import fadeIn from '../../../utils/animation/fadeIn'
 
 interface Props {
   className?: string
@@ -12,6 +13,12 @@ const SearchInput: FC<Props> = ({ className }) => {
   const [focus, setFocus] = useState(false)
   const { breeds } = useContext(BreedContext)
   const input = useRef<null | HTMLInputElement>(null)
+  const results = useRef<null | HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    console.log('fired')
+    fadeIn(results.current)
+  }, [focus])
 
   const validBreed = breeds.filter((breed) => {
     if (breed.name.toLowerCase().includes(value.toLowerCase())) return true
@@ -58,7 +65,7 @@ const SearchInput: FC<Props> = ({ className }) => {
       </button>
 
       {focus && (
-        <div className='results'>
+        <div className='results' ref={results}>
           {validBreed.map((breed) => {
             console.log(breed)
             return (

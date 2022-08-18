@@ -15,19 +15,34 @@ const GridImgStyled = styled(GridImg)`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    .hide {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      top: 0;
+      right: 0;
+      z-index: 200;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   .div1 {
     grid-area: 1 / 1 / 4 / 4;
-    background-image: url('/assets/home/cat-or.jpg');
   }
   .div2 {
     grid-area: 4 / 2 / 8 / 4;
-    background-image: url('/assets/home/cat-vert-2.jpg');
   }
   .div3 {
     grid-area: 1 / 4 / 6 / 6;
-    background-image: url('/assets/home/cat-vert.jpg');
   }
 
   @media (max-width: 768px) {

@@ -5,6 +5,7 @@ import LoadingStyled from '../../components/styled/Loading.styled'
 import BreedContext from '../../context/BreedContext'
 import { useContext } from 'react'
 import useScrollToTop from '../../hooks/scrollToTop'
+import Navigation from '../../components/shared/Navigation'
 
 const Homepage = () => {
   useScrollToTop()
@@ -13,8 +14,10 @@ const Homepage = () => {
   return (
     <>
       {stateFetch === 'loading' && <LoadingStyled></LoadingStyled>}
+      {stateFetch === 'error' && <LoadingStyled></LoadingStyled>}
       {stateFetch === 'success' && (
         <>
+          <Navigation></Navigation>
           <HeaderStyled></HeaderStyled>
           <BreedPreviewStyled></BreedPreviewStyled>
           <Info></Info>

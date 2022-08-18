@@ -5,7 +5,6 @@ import BreedPage from './pages/Breed/Breed'
 import GlobalStyle from './components/styled/Global.styled'
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
-import Navigation from './components/shared/Navigation'
 import Layout from './components/styled/Layout.styled'
 import Footer from './components/shared/Footer'
 import { BreedContextProvider } from './context/BreedContext'
@@ -17,7 +16,6 @@ function App() {
         <ThemeProvider theme={theme}>
           <GlobalStyle></GlobalStyle>
           <Layout>
-            <Navigation></Navigation>
             <Routes>
               <Route path='/' element={<Homepage />}></Route>
               <Route path='/:breed' element={<BreedPage />}></Route>

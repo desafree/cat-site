@@ -18,6 +18,7 @@ const BreedPage = () => {
   return (
     <>
       {stateFetch === 'loading' && <LoadingStyled />}
+      {stateFetch === 'loading' && <LoadingStyled></LoadingStyled>}
       {stateFetch === 'success' && breed && (
         <>
           <CatInfoStyled breed={breed}></CatInfoStyled>

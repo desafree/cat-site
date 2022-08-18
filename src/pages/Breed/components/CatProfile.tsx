@@ -11,7 +11,7 @@ const CatProfile: FC<Props> = ({ className, breed }) => {
   const navigation = useNavigate()
 
   const handleClickBack = () => {
-    navigation(-1)
+    navigation('/')
   }
 
   return (

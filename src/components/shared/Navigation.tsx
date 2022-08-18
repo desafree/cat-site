@@ -1,12 +1,25 @@
 import { Link } from 'react-router-dom'
+import { useRef, useLayoutEffect } from 'react'
 import NavigationStyled from '../styled/Navigation.styled'
+import gsap from 'gsap'
 
 const Navigation = () => {
+  const list = useRef<HTMLUListElement | null>(null)
+  const q = gsap.utils.selector(list)
+
+  useLayoutEffect(() => {
+    const animation = gsap.from(q('li'), { opacity: 0, y: -20, stagger: 0.1, delay: 0.5 })
+
+    return () => {
+      animation.kill()
+    }
+  }, [])
+
   return (
     <NavigationStyled>
       <Link to='/'>Logo</Link>
 
-      <ul>
+      <ul ref={list}>
         <li>
           <a href='https://github.com/desafree' target='_blank' rel='noreferrer'>
             github

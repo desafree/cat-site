@@ -7,6 +7,7 @@ const NavigationStyled = styled.nav`
   top: 50px;
   left: 273px;
   right: 273px;
+  z-index: 200;
   a {
     color: #000;
   }
