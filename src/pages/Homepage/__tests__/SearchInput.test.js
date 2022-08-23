@@ -18,13 +18,13 @@ const MockSearchInput = () => {
 }
 
 describe('SearchInput component tests', () => {
-  test('check render', async () => {
+  test('check initial render', async () => {
     render(<MockSearchInput />)
     const input = screen.getByRole('textbox')
     expect(input).toBeInTheDocument()
   })
 
-  test('check render', async () => {
+  test('check displayed breeds once focused', async () => {
     render(<MockSearchInput />)
     const input = screen.getByPlaceholderText('Enter your breed')
     fireEvent.focus(input)
@@ -32,7 +32,7 @@ describe('SearchInput component tests', () => {
     expect(options).toBeInTheDocument()
   })
 
-  test('check render', async () => {
+  test('check change value once clicked breed', async () => {
     render(<MockSearchInput />)
     const input = screen.getByPlaceholderText('Enter your breed')
     fireEvent.focus(input)
@@ -40,5 +40,15 @@ describe('SearchInput component tests', () => {
     fireEvent.click(options)
     const newValue = await screen.findByRole('textbox', { target: { value: 'Abyssinian' } })
     expect(newValue).toBeInTheDocument()
+  })
+
+  test('check remove breeds once clicked breed', async () => {
+    render(<MockSearchInput />)
+    const input = screen.getByPlaceholderText('Enter your breed')
+    fireEvent.focus(input)
+    const options = await screen.findByText('Abyssinian')
+    fireEvent.click(options)
+    const noOptions = await screen.queryByTestId('breeds')
+    expect(noOptions).not.toBeInTheDocument()
   })
 })

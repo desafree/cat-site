@@ -10,7 +10,7 @@ interface Props {
 const CatCategory: FC<Props> = ({ className, breed }) => {
   const container = useRef<HTMLDivElement | null>(null)
   const q = gsap.utils.selector(container)
-  const characteristics = breed.temperament.split(',')
+  const characteristics = breed.temperament.split(/[, ]+/)
 
   useLayoutEffect(() => {
     const animation = gsap.from(q('.category'), { opacity: 0, stagger: 0.1, y: 5 })
@@ -22,13 +22,14 @@ const CatCategory: FC<Props> = ({ className, breed }) => {
 
   return (
     <div className={className} ref={container}>
-      {characteristics.map((value) => {
-        return (
-          <div className='category' key={value}>
-            {value}
-          </div>
-        )
-      })}
+      {breed.temperament.length > 0 &&
+        characteristics.map((value) => {
+          return (
+            <div className='category' key={value} data-testid='temperament'>
+              {value}
+            </div>
+          )
+        })}
     </div>
   )
 }

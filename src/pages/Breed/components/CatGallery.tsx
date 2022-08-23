@@ -44,7 +44,7 @@ const CatGallery: FC<Props> = ({ className }) => {
                 style={{
                   backgroundImage: `url(${img.url})`,
                 }}
-                data-testid='prova'
+                data-testid='gallery-item'
                 className='image'
               ></div>
             )

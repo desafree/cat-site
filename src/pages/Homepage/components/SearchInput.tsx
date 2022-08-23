@@ -64,7 +64,7 @@ const SearchInput: FC<Props> = ({ className }) => {
       </button>
 
       {focus && (
-        <div className='results' ref={results}>
+        <div className='results' ref={results} data-testid='breeds'>
           {validBreed.map((breed) => {
             return (
               <div key={breed.id} onClick={onClickHandler}>

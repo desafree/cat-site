@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
 import BreedContextMockProvider from '../../../utils/mock/BreedContextMock'
 import CatCategory from '../components/CatCategory'
-import CatGallery from '../components/CatGallery'
 
 const MockCatCategory = ({ list }) => {
   return (
@@ -21,8 +20,8 @@ const MockCatCategory = ({ list }) => {
 }
 
 describe('catCategory component tests', () => {
+  // mock fetch
   let originalFetch
-
   beforeEach(() => {
     originalFetch = global.fetch
     global.fetch = jest.fn(() =>
@@ -49,24 +48,58 @@ describe('catCategory component tests', () => {
   afterEach(() => {
     global.fetch = originalFetch
   })
-
-  test('prova2', async () => {
-    render(<MockCatCategory list='nico,simo' />)
-    screen.debug()
-    const temperaments = screen.getByText('nico')
-    expect(temperaments).toBeInTheDocument()
+  // --------------
+  test('no temperaments displayed', async () => {
+    render(<MockCatCategory list='' />)
+    const temperaments = screen.queryAllByTestId('temperament')
+    expect(temperaments.length).toBe(0)
   })
 
-  test('prova3', async () => {
-    render(<MockCatCategory list='nico,simo' />)
-
-    const temperaments = screen.queryByText('bla')
-    expect(temperaments).not.toBeInTheDocument()
+  test('all temperaments displayed', async () => {
+    render(<MockCatCategory list='Playful, Social, Intelligent, Curious, Friendly' />)
+    const temperament1 = screen.getByText('Playful')
+    const temperament2 = screen.getByText('Social')
+    const temperament3 = screen.getByText('Intelligent')
+    const temperament4 = screen.getByText('Curious')
+    const temperament5 = screen.getByText('Friendly')
+    expect(temperament1).toBeInTheDocument()
+    expect(temperament2).toBeInTheDocument()
+    expect(temperament3).toBeInTheDocument()
+    expect(temperament4).toBeInTheDocument()
+    expect(temperament5).toBeInTheDocument()
   })
 
-  test('prova3', async () => {
-    render(<CatGallery />)
-    const images = await screen.findAllByTestId('prova')
-    expect(images.length).toBe(2)
+  test('all temperaments displayed split by space', async () => {
+    render(<MockCatCategory list='Playful Social Intelligent Curious Friendly' />)
+    const temperament1 = screen.getByText('Playful')
+    const temperament2 = screen.getByText('Social')
+    const temperament3 = screen.getByText('Intelligent')
+    const temperament4 = screen.getByText('Curious')
+    const temperament5 = screen.getByText('Friendly')
+    expect(temperament1).toBeInTheDocument()
+    expect(temperament2).toBeInTheDocument()
+    expect(temperament3).toBeInTheDocument()
+    expect(temperament4).toBeInTheDocument()
+    expect(temperament5).toBeInTheDocument()
+  })
+
+  test('all temperaments displayed split by space and comma', async () => {
+    render(<MockCatCategory list='Playful,Social Intelligent,Curious Friendly' />)
+    const temperament1 = screen.getByText('Playful')
+    const temperament2 = screen.getByText('Social')
+    const temperament3 = screen.getByText('Intelligent')
+    const temperament4 = screen.getByText('Curious')
+    const temperament5 = screen.getByText('Friendly')
+    expect(temperament1).toBeInTheDocument()
+    expect(temperament2).toBeInTheDocument()
+    expect(temperament3).toBeInTheDocument()
+    expect(temperament4).toBeInTheDocument()
+    expect(temperament5).toBeInTheDocument()
+  })
+
+  test('all temperaments displayed split by space and comma in the correct number', async () => {
+    render(<MockCatCategory list='Playful,Social Intelligent,Curious Friendly' />)
+    const temperaments = screen.getAllByTestId('temperament')
+    expect(temperaments.length).toBe(5)
   })
 })
