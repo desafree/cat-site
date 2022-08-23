@@ -16,7 +16,6 @@ const SearchInput: FC<Props> = ({ className }) => {
   const results = useRef<null | HTMLDivElement>(null)
 
   useLayoutEffect(() => {
-    console.log('fired')
     fadeIn(results.current)
   }, [focus])
 
@@ -67,7 +66,6 @@ const SearchInput: FC<Props> = ({ className }) => {
       {focus && (
         <div className='results' ref={results}>
           {validBreed.map((breed) => {
-            console.log(breed)
             return (
               <div key={breed.id} onClick={onClickHandler}>
                 {breed.name}
