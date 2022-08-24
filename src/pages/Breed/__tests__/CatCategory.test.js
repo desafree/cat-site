@@ -20,35 +20,6 @@ const MockCatCategory = ({ list }) => {
 }
 
 describe('catCategory component tests', () => {
-  // mock fetch
-  let originalFetch
-  beforeEach(() => {
-    originalFetch = global.fetch
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        json: () =>
-          Promise.resolve([
-            {
-              id: 'xnzzM6MBI',
-              url: 'https://cdn2.thecatapi.com/images/xnzzM6MBI.jpg',
-              width: 2592,
-              height: 1629,
-            },
-            {
-              id: 'xnzzM6MBI',
-              url: 'https://cdn2.thecatapi.com/images/xnzzM6MBI.jpg',
-              width: 2592,
-              height: 1629,
-            },
-          ]),
-      }),
-    )
-  })
-
-  afterEach(() => {
-    global.fetch = originalFetch
-  })
-  // --------------
   test('no temperaments displayed', async () => {
     render(<MockCatCategory list='' />)
     const temperaments = screen.queryAllByTestId('temperament')
@@ -97,8 +68,20 @@ describe('catCategory component tests', () => {
     expect(temperament5).toBeInTheDocument()
   })
 
-  test('all temperaments displayed split by space and comma in the correct number', async () => {
-    render(<MockCatCategory list='Playful,Social Intelligent,Curious Friendly' />)
+  test('all temperaments displayed split by space in the correct number', async () => {
+    render(<MockCatCategory list='Playful Social Intelligent Curious Friendly' />)
+    const temperaments = screen.getAllByTestId('temperament')
+    expect(temperaments.length).toBe(5)
+  })
+
+  test('all temperaments displayed split by comma in the correct number', async () => {
+    render(<MockCatCategory list='Playful, Social, Intelligent, Curious, Friendly' />)
+    const temperaments = screen.getAllByTestId('temperament')
+    expect(temperaments.length).toBe(5)
+  })
+
+  test('all temperaments displayed split by comma and space in the correct number', async () => {
+    render(<MockCatCategory list='Playful Social, Intelligent Curious, Friendly' />)
     const temperaments = screen.getAllByTestId('temperament')
     expect(temperaments.length).toBe(5)
   })

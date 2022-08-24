@@ -51,7 +51,7 @@ describe('catGallery component tests', () => {
   test('displayed photo', async () => {
     render(<MockCatGallery />)
     const gallery = await screen.findAllByTestId('gallery-item')
-    expect(gallery[0]).toBeInTheDocument()
+    expect(gallery.length > 0).toBeTruthy()
   })
   test('displayed correct number of photo', async () => {
     render(<MockCatGallery />)

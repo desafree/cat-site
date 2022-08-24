@@ -20,14 +20,14 @@ const CatText: FC<Props> = ({ className, breed }) => {
   }, [])
 
   return (
-    <div className={className} ref={container}>
-      <h3>{breed.name}</h3>
-      <p className='description'>{breed.description}</p>
+    <div className={className} ref={container} data-testid='cat-text'>
+      <h3>{breed.name ? breed.name : 'Not available'}</h3>
+      <p className='description'>{breed.description ? breed.description : 'Not available'}</p>
       <p className='info'>
-        <strong>Origin:</strong> {breed.origin}
+        <strong>Origin:</strong> {breed.origin ? breed.origin : 'Not available'}
       </p>
       <p className='info'>
-        <strong>Life Span:</strong> {breed.life_span} years
+        <strong>Life Span:</strong> {breed.life_span ? breed.life_span + ' years' : 'Not available'}
       </p>
       <CharacteristicsStyled breed={breed}></CharacteristicsStyled>
     </div>
