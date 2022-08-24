@@ -40,20 +40,22 @@ const BreedPreview: FC<Props> = ({ className }) => {
 
   return (
     <section className={className} ref={container}>
-      <button className='left' onClick={prevHandleClick}>
+      <button className='left' onClick={prevHandleClick} data-testid='prev'>
         <img src='/assets/icons/arrow-back.svg' alt='' />
       </button>
-      <button className='right' onClick={nextHandleClick}>
+      <button className='right' onClick={nextHandleClick} data-testid='next'>
         <img src='/assets/icons/arrow-forward.svg' alt='' />
       </button>
       <div className='breeds'>
         {displayedBreeds.length > 0 &&
           displayedBreeds.map((breed) => {
             return (
-              <Link to={`/${breed.id}`} key={breed.id}>
+              <Link to={`/${breed.id}`} key={breed.id} data-testid='item'>
                 <div
                   style={{
-                    backgroundImage: `url(${breed.image.url})`,
+                    backgroundImage: `url(${
+                      breed.image ? breed.image.url : '/assets/home/no-img.jpg'
+                    })`,
                   }}
                 >
                   <span>{breed.name}</span>

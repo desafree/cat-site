@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 /* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
-import BreedContext from '../../context/BreedContext'
+import BreedContext from '../../../context/BreedContext'
 
 export const BreedContextMockProvider = ({ children }) => {
   const breeds = [

@@ -20,7 +20,7 @@ const SearchInput: FC<Props> = ({ className }) => {
   }, [focus])
 
   const validBreed = breeds.filter((breed) => {
-    if (breed.name.toLowerCase().includes(value.toLowerCase())) return true
+    if (breed.name.toLowerCase().includes(value.trim().toLowerCase())) return true
   })
 
   const onChangeHandler = () => {

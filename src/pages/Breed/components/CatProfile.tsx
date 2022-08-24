@@ -33,11 +33,16 @@ const CatProfile: FC<Props> = ({ className, breed }) => {
     <div
       className={className}
       style={{
-        backgroundImage: `url(${breed.image.url})`,
+        backgroundImage: `url(${breed.image ? breed.image.url : '/assets/home/no-img.jpg'})`,
       }}
       ref={container}
     >
-      <img src={breed.image.url} alt='' className='imgCat' ref={img} />
+      <img
+        src={breed.image ? breed.image.url : '/assets/home/no-img.jpg'}
+        alt=''
+        className='imgCat'
+        ref={img}
+      />
       <button onClick={handleClickBack}>
         {' '}
         <img src='/assets/icons/back.svg' alt='' />{' '}
@@ -46,7 +51,7 @@ const CatProfile: FC<Props> = ({ className, breed }) => {
         <div
           className='img-container'
           style={{
-            backgroundImage: `url(${breed.image.url})`,
+            backgroundImage: `url(${breed.image ? breed.image.url : '/assets/home/no-img.jpg'})`,
           }}
         />
         <div className='text'>

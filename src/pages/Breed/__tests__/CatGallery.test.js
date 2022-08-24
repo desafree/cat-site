@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import theme from '../../../theme'
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
-import BreedContextMockProvider from '../../../utils/mock/BreedContextMock'
+import BreedContextMockProvider from '../../../utils/tests/mock/BreedContextMock'
 import CatGallery from '../components/CatGallery'
 
 const MockCatGallery = () => {

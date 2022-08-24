@@ -1,6 +1,5 @@
 import { FC, useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import CSSRulePlugin from 'gsap/CSSRulePlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
