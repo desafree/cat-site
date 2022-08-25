@@ -15,7 +15,7 @@ const Header: FC<Props> = ({ className }) => {
     const tl = gsap
       .timeline()
       .from(q('.img-container'), { opacity: 0, y: 200 })
-      .from(q('.text'), { opacity: 0, x: -200 }, '<')
+      .from(q('.text'), { opacity: 0, x: -20 }, '<')
 
     return () => {
       tl.kill()

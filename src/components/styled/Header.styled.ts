@@ -129,7 +129,11 @@ const HeaderStyled = styled(Header)`
 
   @media (max-width: 700px) {
     display: block;
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(122, 205, 231, 0.75)
+      ),
       url(/assets/home/cat-smart-2.jpg);
 
     .text {

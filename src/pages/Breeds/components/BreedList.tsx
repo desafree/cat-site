@@ -34,7 +34,7 @@ const BreedList: FC<Props> = ({ className }) => {
 
   return (
     <div className={className}>
-      <h3>Top 10 most popular breeds</h3>
+      <h3>All Breeds</h3>
       <div ref={container}>
         {breeds.map((breed, index) => {
           return (

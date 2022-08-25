@@ -81,7 +81,8 @@ const SearchInputStyled = styled(SearchInput)`
 
   @media (max-width: 700px) {
     input {
-      min-width: 250px;
+      width: 100%;
+      min-width: initial;
     }
   }
 `

@@ -18,6 +18,7 @@ const CatGalleryStyled = styled(CatGallery)`
     grid-template-rows: 240px;
     grid-auto-rows: 240px;
     grid-gap: 20px;
+    justify-content: center;
 
     div {
       background-image: url(/assets/home/cat-home.jpg);
@@ -28,9 +29,9 @@ const CatGalleryStyled = styled(CatGallery)`
     }
   }
 
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     max-width: 300px;
-  }
+  } */
 `
 
 export default CatGalleryStyled
