@@ -8,6 +8,7 @@ import theme from './theme'
 import Layout from './components/styled/Layout.styled'
 import Footer from './components/shared/Footer'
 import { BreedContextProvider } from './context/BreedContext'
+import BreedsPage from './pages/Breeds/Breeds'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path='/' element={<Homepage />}></Route>
+              <Route path='/breeds' element={<BreedsPage />}></Route>
               <Route path='/:breed' element={<BreedPage />}></Route>
             </Routes>
             <Footer></Footer>

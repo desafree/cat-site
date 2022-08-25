@@ -14,7 +14,7 @@ const CatGalleryStyled = styled(CatGallery)`
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 300px));
     grid-template-rows: 240px;
     grid-auto-rows: 240px;
     grid-gap: 20px;
@@ -32,19 +32,5 @@ const CatGalleryStyled = styled(CatGallery)`
     max-width: 300px;
   }
 `
-
-// <div className={className}>
-//       <h3>Other photos</h3>
-//       <div className='gallery'>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//         <div></div>
-//       </div>
-//     </div>
 
 export default CatGalleryStyled

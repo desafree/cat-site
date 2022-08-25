@@ -31,7 +31,11 @@ const Text: FC<Props> = ({ title, description, linkTitle, linkPath, className })
     <div className={className} ref={container}>
       <h3>{title}</h3>
       <p>{description}</p>
-      {linkTitle && linkPath && <LinkStyled url={linkPath}>{linkTitle}</LinkStyled>}
+      {linkTitle && linkPath && (
+        <LinkStyled url={linkPath} type='internal'>
+          {linkTitle}
+        </LinkStyled>
+      )}
     </div>
   )
 }
