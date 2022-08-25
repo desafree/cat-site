@@ -17,8 +17,6 @@ const CatGallery: FC<Props> = ({ className }) => {
     `https://api.thecatapi.com/v1/images/search?limit=8&breed_ids=${params.breed}&api_key=${process.env.REACT_APP_API_KEY}`,
   )
 
-  console.log(gallery)
-
   useLayoutEffect(() => {
     const animation = gsap.from(el('.image'), {
       opacity: 0,
