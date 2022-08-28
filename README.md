@@ -1,12 +1,9 @@
 <h1 align="center">
-  <br>
-  <a href="https://cat-site-2c83f.web.app/"><img src="/assets/icons/logo.svg" alt="Catwiki" width="200"></a>
-  <br>
   CatWiki
   <br>
 </h1>
 
-<h4 align="center">A React.js project that uses a cat API to display cats and alongside their unique information.</h4>
+<h4 align="center">A React.js project that uses a cat API to display cats alongside their unique information. Used to learn GSAP with React.js and Jest + react testing library</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -14,7 +11,7 @@
   <a href="#credits">Technologies</a> •
 </p>
 
-![screenshot](https://imgur.com/a/PExRmtL)
+![screenshot](https://imgur.com/gallery/PExRmtL)
 
 ## Key Features
 
