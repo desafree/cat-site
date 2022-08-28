@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="https://cat-site-2c83f.web.app/">live site</a> •
   <a href="#credits">Technologies</a> •
 </p>
 
