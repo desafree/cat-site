@@ -30,6 +30,10 @@ const NavigationStyled = styled.nav`
           text-decoration: none;
           color: ${({ theme }) => theme.colors.secondary};
           font-weight: 700;
+
+          &:hover {
+            border-bottom: 2px solid ${({ theme }) => theme.colors.secondary};
+          }
         }
       }
     }
@@ -72,6 +76,12 @@ const NavigationStyled = styled.nav`
           list-style: none;
           li {
             margin-bottom: 20px;
+
+            &.internal {
+              a {
+                color: ${({ theme }) => theme.colors.tertiary};
+              }
+            }
             a {
               font-size: 40px;
               font-weight: 700;

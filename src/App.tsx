@@ -9,6 +9,9 @@ import Layout from './components/styled/Layout.styled'
 import Footer from './components/shared/Footer'
 import { BreedContextProvider } from './context/BreedContext'
 import BreedsPage from './pages/Breeds/Breeds'
+import gsap from 'gsap'
+
+gsap.config({ nullTargetWarn: false })
 
 function App() {
   return (

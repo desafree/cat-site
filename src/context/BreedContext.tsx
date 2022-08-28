@@ -10,7 +10,6 @@ const BreedContext = createContext({} as { breeds: ApiBreedResponseType[]; state
 
 export const BreedContextProvider: FC<Props> = ({ children }) => {
   const { data: breeds, stateFetch } = useFetch('https://api.thecatapi.com/v1/breeds')
-  console.log(breeds)
 
   return (
     <BreedContext.Provider value={{ breeds: breeds, stateFetch: stateFetch }}>

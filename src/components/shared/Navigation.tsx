@@ -47,6 +47,9 @@ const Navigation = () => {
 
         <ul ref={list}>
           <li>
+            <Link to='/breeds'>All Breeds</Link>
+          </li>
+          <li>
             <a href='https://github.com/desafree' target='_blank' rel='noreferrer'>
               github
             </a>
@@ -78,6 +81,9 @@ const Navigation = () => {
                 <Link to='/'>
                   <img src='/assets/icons/logo.svg' alt='' />
                 </Link>
+              </li>
+              <li className='internal'>
+                <Link to='/breeds'>All Breeds</Link>
               </li>
               <li>
                 <a href='https://github.com/desafree' target='_blank' rel='noreferrer'>

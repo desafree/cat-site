@@ -39,6 +39,12 @@ const SearchInput: FC<Props> = ({ className }) => {
     setFocus(true)
   }
 
+  const onBlurHandler = () => {
+    setTimeout(() => {
+      setFocus(false)
+    }, 100)
+  }
+
   const moveToPageHandler = () => {
     const breedSelected = breeds.find((breed) => {
       if (breed.name.toLowerCase().includes(value.toLowerCase())) return true
@@ -58,6 +64,7 @@ const SearchInput: FC<Props> = ({ className }) => {
         value={value}
         onChange={onChangeHandler}
         onFocus={onFocusHandler}
+        onBlur={onBlurHandler}
       />
       <button className='go' onClick={moveToPageHandler}>
         GO
