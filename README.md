@@ -8,10 +8,8 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="https://cat-site-2c83f.web.app/">live site</a> •
-  <a href="#credits">Technologies</a> •
+  <a href="#technologies">Technologies</a> •
 </p>
-
-![screenshot](https://imgur.com/gallery/PExRmtL)
 
 ## Key Features
 
@@ -35,4 +33,8 @@ This software uses the following open source packages:
 
 ## Other Projects
 
-[e-commerce app](https://e-commerce-c8199.firebaseapp.com/) - E-commerce project
+[e-commerce app](https://github.com/desafree/e-commerce-project) - E-commerce project
+
+### Disclaimer
+
+This project was created only for practice. All the images in the website were taken from unsplash (https://unsplash.com/@quokkabottle) and Cat API.
