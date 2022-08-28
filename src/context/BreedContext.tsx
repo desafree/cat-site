@@ -1,4 +1,4 @@
-import { Children, createContext, FC } from 'react'
+import { createContext, FC } from 'react'
 import ApiBreedResponseType from '../typescript/interfaces/ApiBreedResponse'
 import useFetch from '../hooks/fetch'
 

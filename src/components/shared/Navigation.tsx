@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { useRef, useLayoutEffect, useState } from 'react'
 import NavigationStyled from '../styled/Navigation.styled'
 import gsap from 'gsap'
-import { createPortal } from 'react-dom'
 
 const Navigation = () => {
   const [hideNav, setHideNav] = useState(false)
